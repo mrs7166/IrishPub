@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e4620;
+}
+
+
+h1 {
+  font-size: 4rem;
+  font-family: serif;
+  text-align: center;
+  color: #ECFFDC;
+  
+  text-shadow: -3px -3px 0 darkgreen, 1px -1px 0 darkgreen, 3px 3px 0 darkgreen,
+    3px 3px 0 darkgreen;
+}
+
+.shamrock-left, .shamrock-right {
+  width: 50px;
+  height: 100px;
+}
+
+.shamrock-left {
+  float: left;
+}
+
+.shamrock-right {
+  float: right;
+}
+
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+	opacity: 1;
+	background-color: white;
+	color: black;
+}
+
+
+.menu-item img {
+    width: 100%;
+}
+
+.enlarged-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+#p4 {
+	background-color: green;
+	padding: 10px;
+}
+
+.enlarged-image img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.enlarged-image p {
+    color: black;
+    font-size: 24px;
+    text-align: center;
+}
+
+.blurred > *:not(.enlarged-image) {
+    filter: blur(5px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+.directions img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) { /* Medium screens */
+    .menu-item {
+        flex-basis: 15%;
+    }
+	#f1, #f3, .directions {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) { /* Large screens */
+    .menu-item {
+        flex-basis: 25%;
+    }
+    #menu {
+        justify-content: space-evenly;
+    }
+	.directions {
+		display: none;
+	}
+	#f1, #f2, #f3 {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 767px) { /* Small screens */
+    header, #menu, footer {
+        display: none;
+    }
+	.directions {
+		display: block;
+	}
+}
